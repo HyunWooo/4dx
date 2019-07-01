@@ -24,7 +24,7 @@ for data in dataList:
         if '알라딘' in str(movie) and '4DX' in str(movie):
             print('오픈!')
             bot.sendMessage(chat_id= '@moviegazza', text=data['theaterNm'] + ' 예매 가즈아~~~~')
-            break
+            break 
         else:
             if(now.hour >= 7 and now.minute == 58 and now.second < 10):
                 bot.sendMessage(chat_id= '@moviegazza', text='정상 작동중')
