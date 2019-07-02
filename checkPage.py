@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 dir(telegram)
 now = datetime.now()
-my_token = '###3777785450:AAGS9m-hWIYg7_eYW8ZxdP85eDYHQ64JSsE'
+my_token = '777785450:AAGS9m-hWIYg7_eYW8ZxdP85eDYHQ64JSsE'
 bot = telegram.Bot(token = my_token)
 
 url = 'http://m.cgv.co.kr/Schedule/cont/ajaxMovieSchedule.aspx'
@@ -26,5 +26,5 @@ for data in dataList:
             bot.sendMessage(chat_id= '@moviegazza', text=data['theaterNm'] + ' 예매 가즈아~~~~')
             break 
         else:
-            if(now.hour >= 7 and now.minute == 58 and now.second < 10):
+            if(now.minute == 58 and now.second < 10):
                 bot.sendMessage(chat_id= '@moviegazza', text='정상 작동중')
