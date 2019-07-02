@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 dir(telegram)
 now = datetime.now()
-my_token = '777785450:AAGS9m-hWIYg7_eYW8ZxdP85eDYHQ64JSsE'
+my_token = '###3777785450:AAGS9m-hWIYg7_eYW8ZxdP85eDYHQ64JSsE'
 bot = telegram.Bot(token = my_token)
 
 url = 'http://m.cgv.co.kr/Schedule/cont/ajaxMovieSchedule.aspx'
@@ -17,7 +17,7 @@ dataList = [{'theaterCd': '0013', 'playYMD': '20190706', 'theaterNm': '용산'},
 for data in dataList:
     response = requests.post(url, data=data)
     html = response.content
-    soup = BeautifulSoup(html, 'html.parser', from_encoding='euc-kr') 
+    soup = BeautifulSoup(html, 'html.parser', from_encoding='euc-kr')
     list = soup.select('.movieTime')
 
     for movie in list:
