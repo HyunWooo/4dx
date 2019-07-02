@@ -26,5 +26,5 @@ for data in dataList:
             bot.sendMessage(chat_id= '@moviegazza', text=data['theaterNm'] + ' 예매 가즈아~~~~')
             break 
 
-if(now.minute == 35 and now.second < 10):
+if(now.minute == 59 and now.second < 10):
     bot.sendMessage(chat_id= '@moviegazza', text='정상 작동중')
