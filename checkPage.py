@@ -17,7 +17,7 @@ dataList = [{'theaterCd': '0013', 'playYMD': '20190706', 'theaterNm': '용산'},
 for data in dataList:
     response = requests.post(url, data=data)
     html = response.content
-    soup = BeautifulSoup(html, 'html.parser', from_encoding='euc-kr')
+    soup = BeautifulSoup(html, 'html.parser', from_encoding='euc-kr') 
     list = soup.select('.movieTime')
 
     for movie in list:
