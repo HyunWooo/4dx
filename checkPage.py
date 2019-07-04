@@ -12,7 +12,8 @@ bot = telegram.Bot(token = my_token)
 
 url = 'http://m.cgv.co.kr/Schedule/cont/ajaxMovieSchedule.aspx'
 
-dataList = [ {'theaterCd': '0107', 'playYMD': '20190706', 'theaterNm': '청담'}]
+# dataList = [ {'theaterCd': '0107', 'playYMD': '20190706', 'theaterNm': '청담'}]
+dataList = []
 
 for data in dataList:
     response = requests.post(url, data=data)
